@@ -1,9 +1,9 @@
 .card {
-    width: 90%;
-    margin: auto;
+    width: 85%;
+    margin: 3rem auto;
     color: white;
     background: #ffffff13;
-    backdrop-filter:  blur(10px);
+    backdrop-filter:  blur(20px);
     border-radius: 30px;
     box-shadow: 0 10px 35px 0 #ffffffa6;
     overflow: hidden;
