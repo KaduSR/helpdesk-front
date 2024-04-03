@@ -1,0 +1,22 @@
+.container {
+    width: 80%;
+    margin: auto;
+    color: white;
+    background: #ffffff13;
+    backdrop-filter:  blur(20px);
+    border-radius: 30px;
+    box-shadow: 0 10px 35px 0 #ffffffa6;
+    overflow: hidden;
+    padding: 20px 30px 50px 30px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: -3%;
+   
+}
+
+table {
+    width: 100%;
+  
+    }

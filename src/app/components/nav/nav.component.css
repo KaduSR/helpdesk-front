@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  width: 13rem;
+  width: 18rem;
   color: white;
 
   background: linear-gradient(
@@ -21,11 +21,12 @@ img {
 }
 
 .sidenav a {
-  color: white;
+  color: black;
 }
 
 .sidenav i {
   margin-right: 0.6rem;
+
 }
 
 .menu {
