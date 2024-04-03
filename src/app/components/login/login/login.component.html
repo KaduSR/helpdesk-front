@@ -27,7 +27,7 @@
       />
     </mat-form-field>
 
-    <button [disabled]="!validaCampos()"
+    <button (click)="logar()" [disabled]="!validaCampos()"
       class="full-width mat-elevation-z5"
       mat-stroked-button
       color="primary"
