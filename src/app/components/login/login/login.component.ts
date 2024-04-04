@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Credenciais } from "../../../models/credenciais";
 import { FormControl, Validators } from "@angular/forms";
-import { Toast, ToastrService } from 'ngx-toastr';
-import { AuthService } from "../../../servives/auth.service";
-import { response } from "express";
+import { ToastrService } from 'ngx-toastr';
+import { Credenciais } from "../../../models/credenciais";
+import { AuthService } from "../../../services/auth.service";
 
 
 @Component({
@@ -13,8 +12,8 @@ import { response } from "express";
 })
 export class LoginComponent implements OnInit {
   creds: Credenciais = {
-    email: "",
-    senha: "",
+    email: '',
+    senha: '',
   };
 
   email = new FormControl(null, Validators.email);
@@ -24,12 +23,15 @@ export class LoginComponent implements OnInit {
     private service: AuthService) {}
 
   ngOnInit(): void { }
-
-    logar() {
-      this.service.authenticate (this.creds).subscribe(resposta => {
-        this.toast.info(resposta.headers.get('AuthService'))
-      })
+  
+  async logar() {
+    try {
+      const resposta = await this.service.authenticate(this.creds).toPromise();
+      this.service.successfulLogin(resposta.headers.get('Authorization').substring(7));
+    } catch (error) {
+      this.toast.error('Usuário ou senha inválidos');
     }
+  }  
 
   validaCampos(): boolean {
     return this.email.valid && this.senha.valid;
