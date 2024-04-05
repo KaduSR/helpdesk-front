@@ -38,6 +38,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { TecnicoListComponent } from "./components/tecnico/tecnico-list/tecnico-list.component";
 import { LoginComponent } from "./components/login/login/login.component";
 import { Toast, ToastrModule } from "ngx-toastr";
+import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -78,7 +79,11 @@ import { Toast, ToastrModule } from "ngx-toastr";
       progressBar: true,
     }),
   ],
-  providers: [provideClientHydration(), provideAnimationsAsync()],
+  providers: [
+    provideClientHydration(),
+    provideAnimationsAsync(),
+    AuthInterceptorProvider,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
