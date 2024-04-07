@@ -1,4 +1,14 @@
 <div class="container">
+  <h1>Listando técnicos</h1>
+  <!-- Novo -->
+  <button class="mat-elevated-z9" mat-stroked-button color="primary" style="color: aliceblue;">Novo</button>
+
+  <mat-form-field hintLabel="Max 20 characters">
+    <mat-label>Digite um nome válido</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Carlos Eduardo" #input>
+    <mat-hint align="end">{{input.value.length}}/20</mat-hint>
+  </mat-form-field>
+
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="position">

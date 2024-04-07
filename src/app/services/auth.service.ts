@@ -12,6 +12,7 @@ export class AuthService {
   
 
   constructor(private http: HttpClient) { }
+  
 
   authenticate (creds: Credenciais) {
     return this.http.post(`${API_CONFIG.baseURL}/login`, creds, {

@@ -11,6 +11,11 @@ export class AuthGuard implements CanActivate {
 
   canActivate( route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     let authenticated = this.authService.isAuthenticated();
+    if (typeof localStorage !== 'undefined') {
+      // Se o localStorage estiver disponível, você pode usá-lo aqui
+    } else {
+      // Caso contrário, você pode tomar alguma outra ação ou fornecer uma mensagem de erro
+    }
 
     if(authenticated) {
       return true;
@@ -18,6 +23,7 @@ export class AuthGuard implements CanActivate {
       this.router.navigate(['login']);
       return false
     }
+    
   }
   
 }
