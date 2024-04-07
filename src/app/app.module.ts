@@ -32,14 +32,17 @@ import { MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from "@angular/material/toolbar";
 
 // Componentes do projeto
+import { NgxMaskDirective, provideNgxMask } from "ngx-mask";
 import { ToastrModule } from "ngx-toastr";
 import { HeaderComponent } from "./components/header/header.component";
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login/login.component";
 import { NavComponent } from "./components/nav/nav.component";
-import { TecnicoListComponent } from "./components/tecnico/tecnico-list/tecnico-list.component";
-import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
 import { ColaboradoresCreateComponent } from "./components/tecnico/colaboradores-create/colaboradores-create.component";
+import { TecnicoListComponent } from "./components/tecnico/colaboradores-list/colaboradores-list.component";
+import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
+
+// Módulo principal da aplicação
 
 @NgModule({
   declarations: [
@@ -47,9 +50,9 @@ import { ColaboradoresCreateComponent } from "./components/tecnico/colaboradores
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    TecnicoListComponent,
     LoginComponent,
-    ColaboradoresCreateComponent
+    ColaboradoresCreateComponent,
+    TecnicoListComponent,
   ],
 
   imports: [
@@ -81,11 +84,13 @@ import { ColaboradoresCreateComponent } from "./components/tecnico/colaboradores
       closeButton: true,
       progressBar: true,
     }),
+    NgxMaskDirective
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
     AuthInterceptorProvider,
+    provideNgxMask({/*Opções de CFG */})
   ],
   bootstrap: [AppComponent],
 })
