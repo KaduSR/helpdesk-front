@@ -4,13 +4,15 @@
     <img class="full-width" src="assets/img/tecnico-create.svg" alt="" />
 
     <section class="section">
-      <mat-checkbox class="margin">ADMIN</mat-checkbox>
-      <mat-checkbox class="margin">Técnico</mat-checkbox>
+      <mat-checkbox (click)="addPerfil(0)" class="margin">ADMIN</mat-checkbox>
+      <mat-checkbox (click)="addPerfil(1)" class="margin">Técnico</mat-checkbox>
     </section>
 
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Nome </mat-label>
       <input [formControl]="nome" 
+      [(ngModel)]="colaborador.nome"
+      name="nome"
       required
       matInput placeholder="Placeholder"
       maxlength="50" />
@@ -18,7 +20,10 @@
     </mat-form-field>
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>CPF</mat-label>
-      <input [formControl]="CPF"
+      <input 
+      [(ngModel)]="colaborador.cpf"
+      name="cpf"
+      [formControl]="CPF"
       required 
       inputmode="numeric"
       mask="000.000.000-00"
@@ -27,20 +32,26 @@
     </mat-form-field>
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>E-mail</mat-label>
-      <input [formControl]="email"
+      <input 
+      [(ngModel)]="colaborador.email"
+      name="email"
+      [formControl]="email"
       required
       matInput placeholder="Placeholder" />
       <mat-icon matSuffix class="material-symbols-outlined"> e-mail</mat-icon>
     </mat-form-field>
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Senha</mat-label>
-      <input [formControl]="senha"
+      <input 
+      [(ngModel)]="colaborador.senha"
+      name="senha"
+      [formControl]="senha"
       required
       type="password" matInput placeholder="Placeholder" />
       <mat-icon matSuffix>password</mat-icon>
     </mat-form-field>
 
-    <button
+    <button (click)="create()"
       [disabled]="!validaCampos()"
       class="mat-elevation-z8"
       type="submit"
