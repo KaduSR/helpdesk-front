@@ -39,7 +39,7 @@ export class ColaboradoresUpdaterComponent {
   ngOnInit() {
     this.colaborador.id = this.route.snapshot.paramMap.get("id");
     this.findById();
-    this.fetchExistingProfiles();
+    
   }
 
   findById(): void {
@@ -49,7 +49,7 @@ export class ColaboradoresUpdaterComponent {
     });
   }
 
-  updater(): void {
+  update(): void {
     this.service.update(this.colaborador).subscribe(
       () => {
         this.Toast.success("Atualizado com sucesso!", "Sucesso");

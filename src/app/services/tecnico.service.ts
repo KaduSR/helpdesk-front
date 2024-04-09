@@ -15,10 +15,6 @@ export class TecnicoService {
     return this.http.get<Tecnico>(`${API_CONFIG.baseURL}/tecnicos/${id}`)
   }
 
-  getExistingProfiles(): Observable<Tecnico> {
-    // Faça uma solicitação HTTP para obter os perfis existentes do banco de dados
-    return this.http.get<Tecnico>(`${API_CONFIG.baseURL}/tecnicos/perfis`)
-  }
     // private _http : HttpClient) { }
     findAll(): Observable<Tecnico[]> {
       return this.http.get<Tecnico[]>(`${API_CONFIG.baseURL}/tecnicos`);

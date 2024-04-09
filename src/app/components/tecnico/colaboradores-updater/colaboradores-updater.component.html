@@ -4,8 +4,8 @@
       <img class="full-width" src="assets/img/tecnico-create.svg" alt="" />
   
       <section class="section">
-        <mat-checkbox  (click)="addPerfil(0)" class="margin">ADMIN</mat-checkbox>
-        <mat-checkbox  (click)="addPerfil(1)" class="margin">Técnico</mat-checkbox>
+        <mat-checkbox (click)="addPerfil(0)" class="margin">ADMIN</mat-checkbox>
+        <mat-checkbox (click)="addPerfil(1)" class="margin">Técnico</mat-checkbox>
       </section>
   
       <mat-form-field class="full-width" appearance="fill">
@@ -51,7 +51,7 @@
         <mat-icon matSuffix>password</mat-icon>
       </mat-form-field>
   
-      <button (click)="updater()"
+      <button (click)="update()"
         [disabled]="!validaCampos()"
         class="mat-elevation-z8"
         type="submit"
