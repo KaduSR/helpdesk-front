@@ -6,6 +6,7 @@ import { LoginComponent } from "./components/login/login/login.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { TecnicoListComponent } from "./components/tecnico/colaboradores-list/colaboradores-list.component";
 import { ColaboradoresCreateComponent } from "./components/tecnico/colaboradores-create/colaboradores-create.component";
+import { ColaboradoresUpdaterComponent } from "./components/tecnico/colaboradores-updater/colaboradores-updater.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},  
@@ -15,7 +16,8 @@ const routes: Routes = [
     children: [
       { path: "home", component: HomeComponent },
       { path: "colaboradores", component: TecnicoListComponent },
-      {path: "colaboradores/create", component:ColaboradoresCreateComponent}
+      {path: "colaboradores/create", component:ColaboradoresCreateComponent},
+      {path: "colaboradores/updater/:id", component: ColaboradoresUpdaterComponent}
     ],
   },
 ];
