@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { AuthGuard } from './../../auth/auth.guard';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from './../../services/auth.service';
-import { Toast, ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "app-nav",
