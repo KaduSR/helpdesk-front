@@ -10,16 +10,23 @@ import { ColaboradoresUpdaterComponent } from "./components/tecnico/colaboradore
 import { ColaboradoresDeleteComponent } from "./components/tecnico/colaboradores-delete/colaboradores-delete.component";
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent},  
+  { path: "login", component: LoginComponent },
   {
     path: "",
-    component: NavComponent, canActivate: [AuthGuard],
+    component: NavComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: "home", component: HomeComponent },
       { path: "colaboradores", component: TecnicoListComponent },
-      {path: "colaboradores/create", component:ColaboradoresCreateComponent},
-      {path: "colaboradores/updater/:id", component: ColaboradoresUpdaterComponent},
-      {path: 'coloboradores/detele/:id', component: ColaboradoresDeleteComponent}
+      { path: "colaboradores/create", component: ColaboradoresCreateComponent },
+      {
+        path: "colaboradores/updater/:id",
+        component: ColaboradoresUpdaterComponent,
+      },
+      {
+        path: "colaboradores/delete/:id",
+        component: ColaboradoresDeleteComponent,
+      },
     ],
   },
 ];

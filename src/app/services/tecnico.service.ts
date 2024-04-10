@@ -27,7 +27,7 @@ export class TecnicoService {
     update(tecnico: Tecnico): Observable<Tecnico> {
       return this.http.put<Tecnico>(`${API_CONFIG.baseURL}/tecnicos/${tecnico.id}`, tecnico);
     }
-    delete(id: number): Observable<void> {
-      return this.http.delete<void>(`${API_CONFIG.baseURL}/tecnicos/${id}`);
+    delete(tecnico: Tecnico): Observable<Tecnico> {
+      return this.http.delete<Tecnico>(`${API_CONFIG.baseURL}/tecnicos/${tecnico.id}`);
     }
   }

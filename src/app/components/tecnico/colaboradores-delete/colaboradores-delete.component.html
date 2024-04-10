@@ -1,1 +1,72 @@
-<p>colaboradores-delete works!</p>
+<div class="container mat-elevation-z10">
+    <form class="form">
+      <h1>Atualização cadastral</h1>
+      <img class="full-width" src="assets/img/tecnico-create.svg" alt="" />
+  
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nome </mat-label>
+        <input [formControl]="nome" 
+        [(ngModel)]="colaborador.nome"
+        name="nome"
+        required
+        matInput placeholder="Placeholder"
+        maxlength="50" />
+        <mat-icon matSuffix>badge</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input 
+        [(ngModel)]="colaborador.cpf"
+        name="cpf"
+        [formControl]="CPF"
+        required 
+        inputmode="numeric"
+        mask="000.000.000-00"
+        matInput placeholder="000.000.000-00" />   
+        <mat-icon matSuffix>pin</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input 
+        [(ngModel)]="colaborador.email"
+        name="email"
+        [formControl]="email"
+        required
+        matInput placeholder="Placeholder" />
+        <mat-icon matSuffix class="material-symbols-outlined"> e-mail</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input 
+        [(ngModel)]="colaborador.senha"
+        name="senha"
+        [formControl]="senha"
+        required
+        type="password" matInput placeholder="Placeholder" />
+        <mat-icon matSuffix>password</mat-icon>
+      </mat-form-field>
+  
+      <button (click)="delete()"
+        [disabled]="!validaCampos()"
+        class="mat-elevation-z8"
+        type="submit"
+        mat-flat-button
+        color="basic"
+      >
+        <mat-icon matSuffix class="material-symbols-outlined">done_all</mat-icon>
+        confirmar
+      </button>
+      <button
+        routerLink="../../"
+        class="mat-elevation-z8"
+        mat-stroked-button
+        color="warn"
+      >
+        <mat-icon matSuffix class="material-symbols-outlined">close</mat-icon>
+        Cancelar
+      </button>
+    </form>
+  
+    <p>Desenvolvido por Kadu Ribeiro Dev | Front-End</p>
+  </div>
+  
