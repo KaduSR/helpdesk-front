@@ -20,14 +20,7 @@ export class ColaboradoresDeleteComponent {
     perfis: [],
     dataCriacao: "",
   };
-  nome: FormControl = new FormControl(null, Validators.minLength(3));
-
-  CPF: FormControl = new FormControl(null, Validators.required);
-
-  email: FormControl = new FormControl(null, Validators.email);
-
-  senha: FormControl = new FormControl(null, Validators.minLength(8));
-
+  
   constructor(
     private service: TecnicoService,
     private Toast: ToastrService,
@@ -62,11 +55,6 @@ export class ColaboradoresDeleteComponent {
           this.Toast.error(logerror.error.message, "Erro!");
         }
       }
-    );
-  }
-  validaCampos(): boolean {
-    return (
-      this.nome.valid && this.CPF.valid && this.email.valid && this.senha.valid
     );
   }
 }
