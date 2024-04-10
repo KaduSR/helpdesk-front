@@ -43,6 +43,10 @@ import { ColaboradoresDeleteComponent } from "./components/tecnico/colaboradores
 import { TecnicoListComponent } from "./components/tecnico/colaboradores-list/colaboradores-list.component";
 import { ColaboradoresUpdaterComponent } from "./components/tecnico/colaboradores-updater/colaboradores-updater.component";
 
+import { ClientesCreateComponent } from "./components/cliente/clientes-create/clientes-create.component";
+import { clientesresDeleteComponent } from "./components/cliente/clientes-delete/clientes-delete.component";
+import { ClienteListComponent } from "./components/cliente/clientes-list/clientes-list.component";
+import { clientesresUpdaterComponent } from "./components/cliente/clientes-updater/clientes-updater.component";
 import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
 
 // Módulo principal da aplicação
@@ -57,8 +61,11 @@ import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
     ColaboradoresCreateComponent,
     TecnicoListComponent,
     ColaboradoresUpdaterComponent,
-
     ColaboradoresDeleteComponent,
+    ClienteListComponent,
+    ClientesCreateComponent,
+    clientesresDeleteComponent,
+    clientesresUpdaterComponent,
   ],
 
   imports: [

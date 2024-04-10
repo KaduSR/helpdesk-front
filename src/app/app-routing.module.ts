@@ -8,6 +8,10 @@ import { TecnicoListComponent } from "./components/tecnico/colaboradores-list/co
 import { ColaboradoresCreateComponent } from "./components/tecnico/colaboradores-create/colaboradores-create.component";
 import { ColaboradoresUpdaterComponent } from "./components/tecnico/colaboradores-updater/colaboradores-updater.component";
 import { ColaboradoresDeleteComponent } from "./components/tecnico/colaboradores-delete/colaboradores-delete.component";
+import { ClienteListComponent } from "./components/cliente/clientes-list/clientes-list.component";
+import { ClientesCreateComponent } from "./components/cliente/clientes-create/clientes-create.component";
+import { clientesresUpdaterComponent } from "./components/cliente/clientes-updater/clientes-updater.component";
+import { clientesresDeleteComponent } from "./components/cliente/clientes-delete/clientes-delete.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -27,12 +31,22 @@ const routes: Routes = [
         path: "colaboradores/delete/:id",
         component: ColaboradoresDeleteComponent,
       },
+      { path: "clientes", component: ClienteListComponent },
+      { path: "clientes/create", component: ClientesCreateComponent },
+      {
+        path: "Clientes/updater/:id",
+        component: clientesresUpdaterComponent,
+      },
+      {
+        path: "clientes/delete/:id",
+        component: clientesresDeleteComponent,
+      },
     ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+exports: [RouterModule],
 })
 export class AppRoutingModule {}
