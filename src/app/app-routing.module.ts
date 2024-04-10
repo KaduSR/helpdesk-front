@@ -7,6 +7,7 @@ import { NavComponent } from "./components/nav/nav.component";
 import { TecnicoListComponent } from "./components/tecnico/colaboradores-list/colaboradores-list.component";
 import { ColaboradoresCreateComponent } from "./components/tecnico/colaboradores-create/colaboradores-create.component";
 import { ColaboradoresUpdaterComponent } from "./components/tecnico/colaboradores-updater/colaboradores-updater.component";
+import { ColaboradoresDeleteComponent } from "./components/tecnico/colaboradores-delete/colaboradores-delete.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},  
@@ -17,7 +18,8 @@ const routes: Routes = [
       { path: "home", component: HomeComponent },
       { path: "colaboradores", component: TecnicoListComponent },
       {path: "colaboradores/create", component:ColaboradoresCreateComponent},
-      {path: "colaboradores/updater/:id", component: ColaboradoresUpdaterComponent}
+      {path: "colaboradores/updater/:id", component: ColaboradoresUpdaterComponent},
+      {path: 'coloboradores/detele/:id', component: ColaboradoresDeleteComponent}
     ],
   },
 ];

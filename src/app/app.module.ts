@@ -39,8 +39,10 @@ import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/login/login/login.component";
 import { NavComponent } from "./components/nav/nav.component";
 import { ColaboradoresCreateComponent } from "./components/tecnico/colaboradores-create/colaboradores-create.component";
+import { ColaboradoresDeleteComponent } from "./components/tecnico/colaboradores-delete/colaboradores-delete.component";
 import { TecnicoListComponent } from "./components/tecnico/colaboradores-list/colaboradores-list.component";
-import { ColaboradoresUpdaterComponent } from './components/tecnico/colaboradores-updater/colaboradores-updater.component';
+import { ColaboradoresUpdaterComponent } from "./components/tecnico/colaboradores-updater/colaboradores-updater.component";
+
 import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
 
 // Módulo principal da aplicação
@@ -55,6 +57,8 @@ import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
     ColaboradoresCreateComponent,
     TecnicoListComponent,
     ColaboradoresUpdaterComponent,
+
+    ColaboradoresDeleteComponent,
   ],
 
   imports: [
@@ -86,13 +90,15 @@ import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
       closeButton: true,
       progressBar: true,
     }),
-    NgxMaskDirective
+    NgxMaskDirective,
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
     AuthInterceptorProvider,
-    provideNgxMask({/*Opções de CFG */})
+    provideNgxMask({
+      /*Opções de CFG */
+    }),
   ],
   bootstrap: [AppComponent],
 })
