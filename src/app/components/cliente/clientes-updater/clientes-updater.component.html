@@ -4,8 +4,7 @@
       <img class="full-width" src="assets/img/cliente-create.svg" alt="" />
   
       <section class="section">
-        <mat-checkbox (click)="addPerfil(0)" class="margin">ADMIN</mat-checkbox>
-        <mat-checkbox (click)="addPerfil(1)" class="margin">Técnico</mat-checkbox>
+        <mat-checkbox  (click)="addPerfil(1)" [checked]="true" class="margin">Cliente</mat-checkbox>
       </section>
   
       <mat-form-field class="full-width" appearance="fill">
