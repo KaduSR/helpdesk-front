@@ -12,6 +12,7 @@ import { ClienteListComponent } from "./components/cliente/clientes-list/cliente
 import { ClientesCreateComponent } from "./components/cliente/clientes-create/clientes-create.component";
 import { clientesresUpdaterComponent } from "./components/cliente/clientes-updater/clientes-updater.component";
 import { clientesresDeleteComponent } from "./components/cliente/clientes-delete/clientes-delete.component";
+import { ChamadoListComponent } from "./components/chamado/chamado-list/chamado-list.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -41,12 +42,13 @@ const routes: Routes = [
         path: "clientes/delete/:id",
         component: clientesresDeleteComponent,
       },
+      { path: "chamados", component: ChamadoListComponent },
     ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
