@@ -1,0 +1,53 @@
+.container {
+    width: 80%;
+    margin: auto;
+    color: white;
+    background: #ffffff13;
+    backdrop-filter:  blur(20px);
+    border-radius: 30px;
+    box-shadow: 0 10px 35px 0 #ffffffa6;
+    overflow: hidden;
+    padding: 20px 30px 50px 30px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: -3%;
+   
+}
+
+table {
+    width: 100%;
+  
+    }
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 10px;
+    margin: auto;
+}
+button {
+    width: 10%;
+    height: 40px;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 2%;
+    margin-top: 15px;
+    
+    
+
+}
+.edit {
+    color: whitesmoke;
+}
+
+.delete {
+    color: red;
+}
+
+mat-radio-group {
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

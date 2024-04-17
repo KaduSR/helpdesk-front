@@ -16,6 +16,7 @@ export class ChamadoListComponent implements OnInit {
     'position',
     'titulo',
     'cliente',
+    'tecnico',
     'dataAbertura',
     'dataFechamento',
     'prioridade',
@@ -29,4 +30,9 @@ export class ChamadoListComponent implements OnInit {
   constructor () { }
   
   ngOnInit(): void {}
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+  this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
