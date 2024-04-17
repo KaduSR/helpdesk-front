@@ -49,6 +49,7 @@ import { ClienteListComponent } from "./components/cliente/clientes-list/cliente
 import { clientesresUpdaterComponent } from "./components/cliente/clientes-updater/clientes-updater.component";
 import { AuthInterceptorProvider } from "./intercptors/auth.interceptor";
 import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 
 // Módulo principal da aplicação
 
@@ -68,6 +69,7 @@ import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-
     clientesresDeleteComponent,
     clientesresUpdaterComponent,
     ChamadoListComponent,
+    ChamadoCreateComponent,
   ],
 
   imports: [
