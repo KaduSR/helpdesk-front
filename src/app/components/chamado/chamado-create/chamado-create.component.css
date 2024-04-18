@@ -1,0 +1,50 @@
+.container {
+  width: 40%;
+  margin: auto auto 3rem;
+  margin-top: -5%;
+  padding: 1rem;
+  border-radius: 2rem;
+  backdrop-filter:  blur(20px);
+}
+
+.full-width {
+  width: 100%;
+}
+
+h1,
+img {
+  text-align: center;
+}
+
+img {
+  height: 15rem;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  display: block;
+
+}
+
+.status-prioridade {
+  justify-content: space-between;
+  display: inline;
+}
+
+.status-prioridade mat-form-field {
+  width: 50%;
+}
+
+.descricao {
+  min-height: 6rem;
+  max-height: 10rem;
+}
+
+button {
+  margin-left: 0.5rem;
+}
+
+p {
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 30%;
+}

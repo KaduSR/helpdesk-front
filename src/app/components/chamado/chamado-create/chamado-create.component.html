@@ -1,1 +1,63 @@
-<p>chamado-create works!</p>
+<div class="container mat-elevation-z15">
+  <h1 class="full-width">Abertura de Chamado</h1>
+  <img src="assets/img/chamado-create.svg" alt="Chamado imagem" />
+  <form class="form">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Titulo</mat-label>
+      <input matInput placeholder="" />
+    </mat-form-field>
+  </form>
+  <div class="status-prioridade">
+    <mat-form-field appearance="outline">
+      <mat-label>Escolha o status</mat-label>
+      <mat-select>
+        <mat-option value="0">ABERTO</mat-option>
+        <mat-option value="1">EM ANDAMENTO</mat-option>
+        <mat-option value="2">ENCERRADO</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="status-prioridade">
+      <mat-form-field appearance="outline">
+        <mat-label>Escolha a prioridade</mat-label>
+        <mat-select>
+          <mat-option value="0">BAIXA</mat-option>
+          <mat-option value="1">MÉDIA</mat-option>
+          <mat-option value="2">ALTA</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="tecnico">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Escolha o Técnico</mat-label>
+      <mat-select>
+        <mat-option value="0">BAIXA</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="cliente">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Escolha o cliente</mat-label>
+      <mat-select>
+        <mat-option value="0">ALTA</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Descrição do problema </mat-label>
+      <textarea
+        class="descricao"
+        matInput
+        placeholder="Ex. Descrição "
+      ></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="basic" >
+      Adicionar
+      <mat-icon matSuffix class="material-symbols-outlined mat">saved</mat-icon>
+    </button>
+    <button mat-stroked-button color="warn" routerLink="../">
+      Cancelar
+      <mat-icon matSuffix class="material-symbols-outlined">close</mat-icon>
+    </button>
+  </div>
+  <p>Desenvolvido por Kadu Ribeiro Dev | Front-End</p>
+</div>
