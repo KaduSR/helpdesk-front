@@ -2,15 +2,17 @@
   <h1 class="full-width">Abertura de Chamado</h1>
   <img src="assets/img/chamado-create.svg" alt="Chamado imagem" />
   <form class="form">
-    <mat-form-field class="full-width" appearance="outline">
+    <mat-form-field  class="full-width" appearance="outline">
       <mat-label>Titulo</mat-label>
-      <input matInput placeholder="" />
+      <input [formControl]="titulo"
+      required matInput placeholder="" />
     </mat-form-field>
   </form>
   <div class="status-prioridade">
     <mat-form-field appearance="outline">
       <mat-label>Escolha o status</mat-label>
-      <mat-select>
+      <mat-select [formControl]="status"
+      required>
         <mat-option value="0">ABERTO</mat-option>
         <mat-option value="1">EM ANDAMENTO</mat-option>
         <mat-option value="2">ENCERRADO</mat-option>
@@ -19,7 +21,8 @@
     <div class="status-prioridade">
       <mat-form-field appearance="outline">
         <mat-label>Escolha a prioridade</mat-label>
-        <mat-select>
+        <mat-select [formControl]="prioridade"
+        required>
           <mat-option value="0">BAIXA</mat-option>
           <mat-option value="1">MÉDIA</mat-option>
           <mat-option value="2">ALTA</mat-option>
@@ -30,7 +33,8 @@
   <div class="tecnico">
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Escolha o Técnico</mat-label>
-      <mat-select>
+      <mat-select [formControl]="tecnico"
+      required>
         <mat-option value="0">BAIXA</mat-option>
       </mat-select>
     </mat-form-field>
@@ -38,19 +42,22 @@
   <div class="cliente">
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Escolha o cliente</mat-label>
-      <mat-select>
+      <mat-select [formControl]="cliente"
+      required>
         <mat-option value="0">ALTA</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field class="full-width" appearance="outline">
+    <mat-form-field  class="full-width" appearance="outline">
       <mat-label>Descrição do problema </mat-label>
       <textarea
+      [formControl]="descricao"
+    required
         class="descricao"
         matInput
         placeholder="Ex. Descrição "
       ></textarea>
     </mat-form-field>
-    <button mat-raised-button color="basic" >
+    <button [disabled]="!validaCampos()" mat-raised-button color="basic" >
       Adicionar
       <mat-icon matSuffix class="material-symbols-outlined mat">saved</mat-icon>
     </button>
